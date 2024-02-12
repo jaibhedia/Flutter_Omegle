@@ -234,7 +234,7 @@ class _HomeState extends State<Home> {
 
   void connect(String peerid) async {
     final mediaStream = await navigator.mediaDevices
-        .getUserMedia({"video": true, "audio": false});
+        .getUserMedia({"video": true, "audio": true});
 
     // final conn = peer.call(_msgController.text, mediaStream);
     final conn = peer.call(peerid, mediaStream);
@@ -263,7 +263,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         toolbarTextStyle: const TextStyle(color: Colors.black),
-        title: const Text('Omegle Clone'),
+        title: const Text('BaatCheet'),
         actions: [
           Center(
             child: Text(
@@ -342,7 +342,7 @@ class _HomeState extends State<Home> {
   MessageArea() {
     return Container(
       height: 50,
-      color: const Color.fromARGB(255, 211, 211, 211),
+      color: Color.fromARGB(255, 0, 171, 251),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -429,7 +429,7 @@ class _HomeState extends State<Home> {
             shape: const StadiumBorder(),
           ),
           child: const Text('Search for Partner',
-              style: TextStyle(color: Colors.white)),
+              style: TextStyle(color: Color.fromARGB(255, 0, 162, 255))),
         ),
       ],
     );
